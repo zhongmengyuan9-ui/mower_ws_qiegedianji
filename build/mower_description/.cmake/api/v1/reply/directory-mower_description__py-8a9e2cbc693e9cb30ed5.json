@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "mower_description__py",
+		"source" : "/home/q/mower_description_ws/build/mower_description/mower_description__py"
+	}
+}
