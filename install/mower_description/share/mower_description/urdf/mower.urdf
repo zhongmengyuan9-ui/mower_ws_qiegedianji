@@ -21,6 +21,20 @@
     <color rgba="1.0 1.0 1.0 1.0"/>
   </material>
 
+  <!-- 指示灯材质定义 -->
+  <material name="indicator_off">
+    <color rgba="0.5 0.5 0.5 1.0"/>
+  </material>
+  <material name="indicator_red">
+    <color rgba="1.0 0.0 0.0 1.0"/>
+  </material>
+  <material name="indicator_yellow">
+    <color rgba="1.0 0.9 0.0 1.0"/>
+  </material>
+  <material name="indicator_green">
+    <color rgba="0.0 1.0 0.0 1.0"/>
+  </material>
+
   <!-- 底盘 -->
   <link name="base_link">
     <visual>
@@ -235,7 +249,7 @@
         <sphere radius="0.02"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <material name="white"/>
+      <material name="indicator_off"/>
     </visual>
     <collision>
       <geometry>
@@ -256,7 +270,7 @@
         <sphere radius="0.02"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <material name="white"/>
+      <material name="indicator_off"/>
     </visual>
     <collision>
       <geometry>
@@ -277,7 +291,7 @@
         <sphere radius="0.02"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <material name="white"/>
+      <material name="indicator_off"/>
     </visual>
     <collision>
       <geometry>
@@ -535,51 +549,7 @@
     <dynamics damping="0.5" friction="0.1"/>
   </joint>
 
-  <!-- 指示灯默认白色，通过 /gazebo/set_light_properties 动态切换光色 -->
-  <gazebo reference="indicator_light_1">
-    <light name="indicator_light_1_glow" type="point">
-      <pose>0 0 0 0 0 0</pose>
-      <diffuse>1.0 1.0 1.0 1.0</diffuse>
-      <specular>0.2 0.2 0.2 1.0</specular>
-      <attenuation>
-        <range>0.35</range>
-        <constant>0.8</constant>
-        <linear>0.02</linear>
-        <quadratic>0.01</quadratic>
-      </attenuation>
-      <cast_shadows>false</cast_shadows>
-    </light>
-  </gazebo>
-
-  <gazebo reference="indicator_light_2">
-    <light name="indicator_light_2_glow" type="point">
-      <pose>0 0 0 0 0 0</pose>
-      <diffuse>1.0 1.0 1.0 1.0</diffuse>
-      <specular>0.2 0.2 0.2 1.0</specular>
-      <attenuation>
-        <range>0.35</range>
-        <constant>0.8</constant>
-        <linear>0.02</linear>
-        <quadratic>0.01</quadratic>
-      </attenuation>
-      <cast_shadows>false</cast_shadows>
-    </light>
-  </gazebo>
-
-  <gazebo reference="indicator_light_3">
-    <light name="indicator_light_3_glow" type="point">
-      <pose>0 0 0 0 0 0</pose>
-      <diffuse>1.0 1.0 1.0 1.0</diffuse>
-      <specular>0.2 0.2 0.2 1.0</specular>
-      <attenuation>
-        <range>0.35</range>
-        <constant>0.8</constant>
-        <linear>0.02</linear>
-        <quadratic>0.01</quadratic>
-      </attenuation>
-      <cast_shadows>false</cast_shadows>
-    </light>
-  </gazebo>
+  <!-- 指示灯通过材质切换实现状态显示 -->
 
   <!-- Gazebo 配置：插件和传感器 -->
   <gazebo>
@@ -632,12 +602,7 @@
   <gazebo>
     <plugin name="blade_trajectory_controller" filename="libgazebo_ros_joint_pose_trajectory.so">
       <ros>
-        <namespace>/mower</namespace>
-        <remapping>set_joint_trajectory:=blade/set_joint_trajectory</remapping>
-        <!-- 设置日志级别为WARN，减少INFO级别的频繁输出 -->
-        <argument>--ros-args</argument>
-        <argument>-r</argument>
-        <argument>__log_level:=WARN</argument>
+        <namespace>/mower/blade</namespace>
       </ros>
       <update_rate>30.0</update_rate>
       <joint_name>blade_joint</joint_name>
@@ -648,7 +613,7 @@
   <gazebo reference="laser_link">
     <sensor type="ray" name="laser">
       <pose>0 0 0 0 0 0</pose>
-      <visualize>true</visualize>
+      <visualize>false</visualize>
       <update_rate>10</update_rate>
       <ray>
         <scan>

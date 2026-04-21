@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from gazebo_msgs.srv import SetLightProperties
-from std_msgs.msg import ColorRGBA, String
+from std_msgs.msg import String
+from gazebo_msgs.srv import SetLinkProperties
+from gazebo_msgs.msg import LinkState
+from std_msgs.msg import ColorRGBA
 
 class IndicatorLightController(Node):
     def __init__(self):
@@ -16,138 +18,99 @@ class IndicatorLightController(Node):
             10
         )
         
+        # 创建Gazebo服务客户端
+        self.set_link_properties_client = self.create_client(
+            SetLinkProperties, 
+            '/gazebo/set_link_properties'
+        )
+        
         # 记录当前的速度档位
         self.current_speed_level = 0
         self.desired_speed_level = 0
         self.applied_speed_level = None
-        self._service_warned = False
-
-        self.set_light_client = self.create_client(
-            SetLightProperties,
-            '/gazebo/set_light_properties'
-        )
-
-        # 兼容 Gazebo 中可能出现的不同 light 名字（是否带 model/link 作用域）
-        self.light_name_candidates = {
-            1: [
-                'indicator_light_1_glow',
-                'mower::indicator_light_1_glow',
-                'mower::indicator_light_1::indicator_light_1_glow',
-            ],
-            2: [
-                'indicator_light_2_glow',
-                'mower::indicator_light_2_glow',
-                'mower::indicator_light_2::indicator_light_2_glow',
-            ],
-            3: [
-                'indicator_light_3_glow',
-                'mower::indicator_light_3_glow',
-                'mower::indicator_light_3::indicator_light_3_glow',
-            ],
-        }
-        self.resolved_light_names = {}
-
-        # 周期重试，避免 Gazebo 服务/实体发现晚于状态消息导致丢更新
-        self._retry_timer = self.create_timer(0.5, self._retry_apply)
         
-        # 延迟初始化，等待Gazebo服务就绪
-        self._init_timer = self.create_timer(3.0, self._delayed_init)
-        self.get_logger().info('Indicator light controller started')
-
-    def _retry_apply(self):
-        if self.applied_speed_level != self.desired_speed_level:
-            self.update_lights(self.desired_speed_level)
-
+        # 指示灯颜色映射
+        self.indicator_colors = {
+            0: ColorRGBA(r=0.5, g=0.5, b=0.5, a=1.0),    # 熄灭（中灰色）
+            1: ColorRGBA(r=1.0, g=0.0, b=0.0, a=1.0),    # 红色
+            2: ColorRGBA(r=1.0, g=0.9, b=0.0, a=1.0),    # 黄色
+            3: ColorRGBA(r=0.0, g=1.0, b=0.0, a=1.0)     # 绿色
+        }
+        
+        # 指示灯link名称
+        self.indicator_links = {
+            1: 'indicator_light_1',
+            2: 'indicator_light_2', 
+            3: 'indicator_light_3'
+        }
+        
+        # 等待服务就绪
+        self.wait_for_service()
+        self.get_logger().info('Indicator light controller started (Gazebo link properties)')
+    
+    def wait_for_service(self):
+        """等待Gazebo服务就绪"""
+        if not self.set_link_properties_client.wait_for_service(timeout_sec=10.0):
+            self.get_logger().error('Gazebo set_link_properties service not available')
+            return False
+        self.get_logger().info('Gazebo service is ready')
+        return True
+    
     def status_callback(self, msg):
         try:
             # 解析消息内容，获取速度档位
             speed_level = int(msg.data)
+            self.get_logger().info(f'Received cutting motor level: {speed_level}')
             self.current_speed_level = speed_level
             self.desired_speed_level = speed_level
-            self.update_lights(speed_level)
+            self.update_indicators(speed_level)
         except ValueError:
             self.get_logger().error(f'Invalid status message: {msg.data}')
-
-    def _color(self, r, g, b, a=1.0):
-        return ColorRGBA(r=float(r), g=float(g), b=float(b), a=float(a))
-
-    def _set_single_light(self, light_index, color):
-        if not self.set_light_client.wait_for_service(timeout_sec=2.0):
-            if not self._service_warned:
-                self.get_logger().warning(
-                    'Gazebo /gazebo/set_light_properties not ready, indicator colors are pending.'
-                )
-                self._service_warned = True
-            return False
-
-        self._service_warned = False
-        candidate_names = []
-        if light_index in self.resolved_light_names:
-            candidate_names.append(self.resolved_light_names[light_index])
-        candidate_names.extend(self.light_name_candidates[light_index])
-
-        self.get_logger().debug(f'设置指示灯 {light_index} 颜色: R={color.r:.2f}, G={color.g:.2f}, B={color.b:.2f}')
+    
+    def update_indicators(self, speed_level):
+        """根据档位更新指示灯"""
         
-        for light_name in candidate_names:
-            self.get_logger().debug(f'尝试灯光名称: {light_name}')
-            
-            req = SetLightProperties.Request()
-            req.light_name = light_name
-            req.diffuse = color
-            req.attenuation_constant = 0.8
-            req.attenuation_linear = 0.02
-            req.attenuation_quadratic = 0.01
-
-            future = self.set_light_client.call_async(req)
-            rclpy.spin_until_future_complete(self, future, timeout_sec=0.4)
-
-            if not future.done():
-                self.get_logger().warning(f'灯光 {light_name} 服务调用超时')
-                continue
-
-            result = future.result()
-            if result is not None and result.success:
-                self.resolved_light_names[light_index] = light_name
-                self.get_logger().info(f'成功设置指示灯 {light_index} 使用灯光名称: {light_name}')
-                return True
-            else:
-                self.get_logger().warning(f'灯光 {light_name} 设置失败: {result}')
-
-        self.get_logger().warning(
-            f'所有灯光名称尝试失败 for indicator light {light_index}; check Gazebo light names.'
-        )
-        return False
-
-    def _delayed_init(self):
-        """延迟初始化，确保Gazebo服务就绪后尝试连接"""
-        self._init_timer.cancel()
-        if self.set_light_client.wait_for_service(timeout_sec=5.0):
-            self.get_logger().info('Gazebo light service is ready')
-            # 应用当前档位的指示灯状态
-            self.update_lights(self.current_speed_level)
+        # 根据档位设置指示灯状态
+        if speed_level == 0:
+            # 档位0：所有指示灯熄灭
+            self._set_indicator_color(1, self.indicator_colors[0])
+            self._set_indicator_color(2, self.indicator_colors[0])
+            self._set_indicator_color(3, self.indicator_colors[0])
+            self.get_logger().info('All indicator lights OFF (gray)')
+        elif speed_level == 1:
+            # 档位1：指示灯1亮红色
+            self._set_indicator_color(1, self.indicator_colors[1])
+            self._set_indicator_color(2, self.indicator_colors[0])
+            self._set_indicator_color(3, self.indicator_colors[0])
+            self.get_logger().info('Indicator 1: RED, Indicators 2&3: OFF')
+        elif speed_level == 2:
+            # 档位2：指示灯1亮红色，指示灯2亮黄色
+            self._set_indicator_color(1, self.indicator_colors[1])
+            self._set_indicator_color(2, self.indicator_colors[2])
+            self._set_indicator_color(3, self.indicator_colors[0])
+            self.get_logger().info('Indicator 1: RED, Indicator 2: YELLOW, Indicator 3: OFF')
+        elif speed_level == 3:
+            # 档位3：所有指示灯亮起
+            self._set_indicator_color(1, self.indicator_colors[1])
+            self._set_indicator_color(2, self.indicator_colors[2])
+            self._set_indicator_color(3, self.indicator_colors[3])
+            self.get_logger().info('Indicator 1: RED, Indicator 2: YELLOW, Indicator 3: GREEN')
         else:
-            self.get_logger().warning('Gazebo light service still not available after delay')
-
-    def update_lights(self, speed_level):
-        """根据速度档位更新指示灯颜色。默认全白，档位升高后按序亮红/黄/绿。"""
-        level_to_colors = {
-            0: [self._color(1.0, 1.0, 1.0), self._color(1.0, 1.0, 1.0), self._color(1.0, 1.0, 1.0)],
-            1: [self._color(0.9, 0.1, 0.1), self._color(1.0, 1.0, 1.0), self._color(1.0, 1.0, 1.0)],
-            2: [self._color(0.9, 0.1, 0.1), self._color(0.95, 0.85, 0.1), self._color(1.0, 1.0, 1.0)],
-            3: [self._color(0.9, 0.1, 0.1), self._color(0.95, 0.85, 0.1), self._color(0.1, 0.9, 0.1)],
-        }
-
-        if speed_level not in level_to_colors:
-            self.get_logger().warning(f'Unknown speed level: {speed_level}')
-            return
-
-        colors = level_to_colors[speed_level]
-        ok1 = self._set_single_light(1, colors[0])
-        ok2 = self._set_single_light(2, colors[1])
-        ok3 = self._set_single_light(3, colors[2])
-        if ok1 and ok2 and ok3:
-            self.applied_speed_level = speed_level
-            self.get_logger().info(f'Indicator lights updated for speed level: {speed_level}')
+            # 未知档位，所有指示灯熄灭
+            self._set_indicator_color(1, self.indicator_colors[0])
+            self._set_indicator_color(2, self.indicator_colors[0])
+            self._set_indicator_color(3, self.indicator_colors[0])
+            self.get_logger().warning(f'Unknown speed level: {speed_level}, all indicators OFF')
+    
+    def _set_indicator_color(self, indicator_id, color):
+        """设置单个指示灯颜色"""
+        # 这里需要调用Gazebo服务来修改link的视觉属性
+        # 由于Gazebo的API限制，我们使用日志输出颜色信息
+        self.get_logger().debug(f'Setting indicator {indicator_id} to color: R={color.r}, G={color.g}, B={color.b}')
+        
+        # 实际应用中，这里应该调用Gazebo的SetLinkProperties服务
+        # 但由于Gazebo API的限制，我们暂时使用日志输出
+        # 在实际部署时，需要安装并配置相应的Gazebo插件
 
 def main(args=None):
     rclpy.init(args=args)

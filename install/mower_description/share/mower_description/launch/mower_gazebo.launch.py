@@ -27,7 +27,12 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             os.path.join(pkg_gazebo_ros, 'launch', 'gzserver.launch.py')
         ),
-        launch_arguments={'world': world}.items()
+        launch_arguments={
+            'world': world,
+            # SetLightProperties service is provided by gazebo_ros_api_plugin.
+            # Without it, indicator_light_controller cannot control light on/off.
+            'extra_gazebo_args': '-s libgazebo_ros_api_plugin.so',
+        }.items()
     )
 
     gazebo_client = IncludeLaunchDescription(
