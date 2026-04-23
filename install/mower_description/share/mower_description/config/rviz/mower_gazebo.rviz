@@ -26,7 +26,7 @@ Visualization Manager:
       Cell Size: 1
       Class: rviz_default_plugins/Grid
       Color: 160; 160; 164
-      Enabled: true
+      Enabled: false
       Line Style:
         Line Width: 0.029999999329447746
         Value: Lines
@@ -39,9 +39,9 @@ Visualization Manager:
       Plane: XY
       Plane Cell Count: 20
       Reference Frame: <Fixed Frame>
-      Value: true
+      Value: false
     - Class: rviz_default_plugins/TF
-      Enabled: true
+      Enabled: false
       Frame Timeout: 10
       Frames:
         All Enabled: true
@@ -53,7 +53,7 @@ Visualization Manager:
       Tree:
         {}
       Update Interval: 0
-      Value: true
+      Value: false
     - Alpha: 1
       Class: rviz_default_plugins/RobotModel
       Collision Enabled: false
@@ -66,11 +66,6 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /robot_description
       Enabled: true
-      Robot Description:
-        Value: /robot_description
-      TF Prefix: ""
-      Update Interval: 0
-      Use TF: false
       Links:
         All Links Enabled: true
         Expand Joint Details: false
@@ -78,6 +73,21 @@ Visualization Manager:
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
         base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        blade1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        blade2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        blade3_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -96,6 +106,11 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+        cutting_motor_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         front_left_caster:
           Alpha: 1
           Show Axes: false
@@ -144,16 +159,6 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
-    - Class: rviz_default_plugins/JointStates
-      Enabled: true
-      Name: JointStates
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /joint_states
-      Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
@@ -250,6 +255,19 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Marker
+      Namespaces:
+        gear_display: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /mower/gear_marker
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -269,25 +287,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 9.623079299926758
+      Distance: 10.777849197387695
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.9553354978561401
-        Y: -4.3740010261535645
-        Z: -1.2043681144714355
+        X: 1.7980245351791382
+        Y: -4.7371506690979
+        Z: 2.210822105407715
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.4049992859363556
+      Pitch: 0.8849989771842957
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz_default_plugins)
-      Yaw: 1.7249960899353027
+      Yaw: 4.0999979972839355
     Saved: ~
 Window Geometry:
   Displays:

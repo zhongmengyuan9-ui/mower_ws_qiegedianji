@@ -382,7 +382,7 @@ endif()
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/mower_description" TYPE PROGRAM FILES
     "/home/q/mower_description_ws/src/mower_description/src/cutting_motor_controller.py"
-    "/home/q/mower_description_ws/src/mower_description/src/indicator_light_controller.py"
+    "/home/q/mower_description_ws/src/mower_description/src/gear_marker_publisher.py"
     )
 endif()
 

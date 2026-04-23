@@ -22,7 +22,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 # Install Python scripts
 install(PROGRAMS
   src/cutting_motor_controller.py
-  src/indicator_light_controller.py
+  src/gear_marker_publisher.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

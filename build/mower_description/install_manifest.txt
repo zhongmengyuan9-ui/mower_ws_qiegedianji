@@ -61,9 +61,8 @@
 /home/q/mower_description_ws/install/mower_description/share/mower_description/srv/CuttingMotorControl_Request.msg
 /home/q/mower_description_ws/install/mower_description/share/mower_description/srv/CuttingMotorControl_Response.msg
 /home/q/mower_description_ws/install/mower_description/lib/mower_description/cutting_motor_controller.py
-/home/q/mower_description_ws/install/mower_description/lib/mower_description/indicator_light_controller.py
+/home/q/mower_description_ws/install/mower_description/lib/mower_description/gear_marker_publisher.py
 /home/q/mower_description_ws/install/mower_description/share/mower_description/launch/mower_gazebo.launch.py
-/home/q/mower_description_ws/install/mower_description/share/mower_description/launch/__pycache__/mower_gazebo.launch.cpython-310.pyc
 /home/q/mower_description_ws/install/mower_description/share/mower_description/urdf/mower.urdf
 /home/q/mower_description_ws/install/mower_description/share/mower_description/worlds/room_world.world
 /home/q/mower_description_ws/install/mower_description/share/mower_description/worlds/room_world_open.world

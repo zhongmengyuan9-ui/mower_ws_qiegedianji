@@ -5,7 +5,7 @@ set(mower_description_BUILD_DEPENDS "rosidl_default_generators" "urdf" "xacro" "
 set(mower_description_BUILDTOOL_DEPENDS "ament_cmake")
 set(mower_description_BUILD_EXPORT_DEPENDS "urdf" "xacro" "gazebo_ros" "gazebo_msgs" "std_msgs" "trajectory_msgs")
 set(mower_description_BUILDTOOL_EXPORT_DEPENDS )
-set(mower_description_EXEC_DEPENDS "launch" "launch_ros" "robot_state_publisher" "joint_state_publisher" "rviz2" "rclpy" "rosidl_default_runtime" "urdf" "xacro" "gazebo_ros" "gazebo_msgs" "std_msgs" "trajectory_msgs")
+set(mower_description_EXEC_DEPENDS "launch" "launch_ros" "robot_state_publisher" "joint_state_publisher" "rviz2" "rclpy" "visualization_msgs" "rosidl_default_runtime" "urdf" "xacro" "gazebo_ros" "gazebo_msgs" "std_msgs" "trajectory_msgs")
 set(mower_description_TEST_DEPENDS "ament_lint_auto" "ament_lint_common")
 set(mower_description_GROUP_DEPENDS )
 set(mower_description_MEMBER_OF_GROUPS "rosidl_interface_packages")
