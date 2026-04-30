@@ -77,21 +77,6 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        blade1_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        blade2_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        blade3_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         bumper_link:
           Alpha: 1
           Show Axes: false
@@ -106,11 +91,6 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        cutting_motor_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         front_left_caster:
           Alpha: 1
           Show Axes: false
@@ -189,7 +169,7 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /mower/camera/points
+        Value: /gmower/camera/points
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
@@ -205,7 +185,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /mower/camera/image_raw
+        Value: /gmower/camera/image_raw
       Value: true
     - Class: rviz_default_plugins/Image
       Enabled: true
@@ -219,7 +199,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /mower/camera/depth/image_raw
+        Value: /gmower/camera/depth/image_raw
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
@@ -233,7 +213,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: Intensity
       Decay Time: 0
-      Enabled: true
+      Enabled: false
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Max Intensity: 0
@@ -254,20 +234,7 @@ Visualization Manager:
         Value: /scan
       Use Fixed Frame: true
       Use rainbow: true
-      Value: true
-    - Class: rviz_default_plugins/Marker
-      Enabled: true
-      Name: Marker
-      Namespaces:
-        gear_display: true
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /mower/gear_marker
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -287,25 +254,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 10.777849197387695
+      Distance: 9.623079299926758
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.7980245351791382
-        Y: -4.7371506690979
-        Z: 2.210822105407715
+        X: 1.9553354978561401
+        Y: -4.3740010261535645
+        Z: -1.2043681144714355
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.8849989771842957
+      Pitch: 0.4049992859363556
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz_default_plugins)
-      Yaw: 4.0999979972839355
+      Yaw: 1.7249960899353027
     Saved: ~
 Window Geometry:
   Displays:

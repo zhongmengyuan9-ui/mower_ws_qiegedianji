@@ -169,7 +169,7 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /mower/camera/points
+        Value: /gmower/camera/points
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
@@ -185,7 +185,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /mower/camera/image_raw
+        Value: /gmower/camera/image_raw
       Value: true
     - Class: rviz_default_plugins/Image
       Enabled: true
@@ -199,7 +199,7 @@ Visualization Manager:
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /mower/camera/depth/image_raw
+        Value: /gmower/camera/depth/image_raw
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true

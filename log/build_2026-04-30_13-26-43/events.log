@@ -1,0 +1,414 @@
+[0.000000] (-) TimerEvent: {}
+[0.000416] (mower_description) JobQueued: {'identifier': 'mower_description', 'dependencies': OrderedDict()}
+[0.000528] (mower_description) JobStarted: {'identifier': 'mower_description'}
+[0.008152] (mower_description) JobProgress: {'identifier': 'mower_description', 'progress': 'cmake'}
+[0.008663] (mower_description) Command: {'cmd': ['/usr/bin/cmake', '/home/q/mower_description_ws/src/mower_description', '-DCMAKE_INSTALL_PREFIX=/home/q/mower_description_ws/install/mower_description'], 'cwd': '/home/q/mower_description_ws/build/mower_description', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'q'), ('LC_TIME', 'zh_CN.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/q'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.112.0'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2823'), ('BUNDLED_DEBUGPY_PATH', '/home/q/.vscode/extensions/ms-python.debugpy-2026.4.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=2f3333c806da51d227423a9769f06860'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7897/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'q'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'q'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/q/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/q/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/humble/bin:/home/q/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/q/.vscode/extensions/ms-python.debugpy-2026.4.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/HF-N-L-001687:@/tmp/.ICE-unix/2823,unix/HF-N-L-001687:/tmp/.ICE-unix/2823'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3b671339_c25a_4a8a_9b90_2effadffb533'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/q/.vscode/extensions/ms-python.debugpy-2026.4.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e6226bf4f7c3027c.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/q/.config/Code/User/workspaceStorage/6751f0c3d213965956ad6ee7fa254979/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e3f6a4e6d3.sock'), ('GNOME_TERMINAL_SERVICE', ':1.465'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '27'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/q/mower_description_ws/build/mower_description'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=2f3333c806da51d227423a9769f06860'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099762] (-) TimerEvent: {}
+[0.123115] (mower_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199848] (-) TimerEvent: {}
+[0.233783] (mower_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.242345] (mower_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299939] (-) TimerEvent: {}
+[0.376060] (mower_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.389393] (mower_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.389698] (mower_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.390245] (mower_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.397022] (mower_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.400041] (-) TimerEvent: {}
+[0.500319] (-) TimerEvent: {}
+[0.542252] (mower_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.553329] (mower_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.553631] (mower_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.554044] (mower_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.557483] (mower_description) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.600412] (-) TimerEvent: {}
+[0.688021] (mower_description) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.700530] (-) TimerEvent: {}
+[0.768814] (mower_description) StdoutLine: {'line': b'-- Found urdf: 2.6.1 (/opt/ros/humble/share/urdf/cmake)\n'}
+[0.800634] (-) TimerEvent: {}
+[0.814358] (mower_description) StdoutLine: {'line': b'-- Found xacro: 2.1.1 (/opt/ros/humble/share/xacro/cmake)\n'}
+[0.815739] (mower_description) StdoutLine: {'line': b'-- Found gazebo_ros: 3.9.0 (/opt/ros/humble/share/gazebo_ros/cmake)\n'}
+[0.846149] (mower_description) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.851500] (mower_description) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.861689] (mower_description) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.873856] (mower_description) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.884645] (mower_description) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.900730] (-) TimerEvent: {}
+[0.925159] (mower_description) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.927537] (mower_description) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.953148] (mower_description) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.000836] (-) TimerEvent: {}
+[1.010332] (mower_description) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.013616] (mower_description) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.026562] (mower_description) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.029551] (mower_description) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.037806] (mower_description) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.046929] (mower_description) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.055479] (mower_description) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.100920] (-) TimerEvent: {}
+[1.186013] (mower_description) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.186318] (mower_description) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.200998] (-) TimerEvent: {}
+[1.301240] (-) TimerEvent: {}
+[1.318865] (mower_description) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.320277] (mower_description) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.373909] (mower_description) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") \n'}
+[1.375246] (mower_description) StdoutLine: {'line': b"-- Checking for module 'bullet>=2.82'\n"}
+[1.389250] (mower_description) StdoutLine: {'line': b'--   Found bullet, version 3.05\n'}
+[1.401319] (-) TimerEvent: {}
+[1.498637] (mower_description) StdoutLine: {'line': b'-- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") \n'}
+[1.501385] (-) TimerEvent: {}
+[1.551188] (mower_description) StdoutLine: {'line': b'-- Found assimp: /usr/include (found version "5.2.0") \n'}
+[1.566150] (mower_description) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[1.593371] (mower_description) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time \n'}
+[1.601501] (-) TimerEvent: {}
+[1.604722] (mower_description) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[1.609015] (mower_description) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.614795] (mower_description) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[1.616075] (mower_description) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[1.616421] (mower_description) StdoutLine: {'line': b'-- OGRE_PREFIX_WATCH changed.\n'}
+[1.621146] (mower_description) StdoutLine: {'line': b"-- Checking for module 'OGRE'\n"}
+[1.635529] (mower_description) StdoutLine: {'line': b'--   Found OGRE, version 1.9.0\n'}
+[1.669676] (mower_description) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[1.675055] (mower_description) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[1.684178] (mower_description) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[1.687429] (mower_description) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[1.687558] (mower_description) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[1.690649] (mower_description) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[1.690792] (mower_description) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[1.693769] (mower_description) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[1.693860] (mower_description) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[1.696861] (mower_description) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[1.696915] (mower_description) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[1.699978] (mower_description) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[1.700024] (mower_description) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[1.701592] (-) TimerEvent: {}
+[1.703024] (mower_description) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[1.770136] (mower_description) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.772119] (mower_description) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.2.1\n'}
+[1.772732] (mower_description) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[1.788578] (mower_description) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") \n'}
+[1.797829] (mower_description) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[1.801691] (-) TimerEvent: {}
+[1.802356] (mower_description) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[1.816240] (mower_description) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[1.858914] (mower_description) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[1.864743] (mower_description) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[1.877718] (mower_description) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[1.901748] (-) TimerEvent: {}
+[1.913541] (mower_description) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[1.915524] (mower_description) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[1.916127] (mower_description) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[1.933554] (mower_description) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[1.938267] (mower_description) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[1.950984] (mower_description) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[1.986020] (mower_description) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[1.988343] (mower_description) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[1.988785] (mower_description) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[1.988981] (mower_description) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[1.989617] (mower_description) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[1.990965] (mower_description) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[2.000934] (mower_description) StdoutLine: {'line': b'-- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") \n'}
+[2.001346] (mower_description) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[2.001805] (-) TimerEvent: {}
+[2.003249] (mower_description) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.14.0\n'}
+[2.003750] (mower_description) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[2.004041] (mower_description) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.006413] (mower_description) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.4.0\n'}
+[2.006863] (mower_description) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[2.084058] (mower_description) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  \n'}
+[2.096287] (mower_description) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[2.101900] (-) TimerEvent: {}
+[2.110155] (mower_description) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[2.147726] (mower_description) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[2.153465] (mower_description) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[2.167383] (mower_description) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[2.202004] (-) TimerEvent: {}
+[2.202898] (mower_description) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[2.203325] (mower_description) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[2.203684] (mower_description) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.204111] (mower_description) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[2.206890] (mower_description) StdoutLine: {'line': b'-- Gazebo version: 11.10\n'}
+[2.207122] (mower_description) StdoutLine: {'line': b"-- Checking for module 'tbb'\n"}
+[2.222097] (mower_description) StdoutLine: {'line': b'--   Found tbb, version 2021.5.0\n'}
+[2.259365] (mower_description) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[2.302128] (-) TimerEvent: {}
+[2.402416] (-) TimerEvent: {}
+[2.502758] (-) TimerEvent: {}
+[2.595464] (mower_description) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.602838] (-) TimerEvent: {}
+[2.703078] (-) TimerEvent: {}
+[2.803287] (-) TimerEvent: {}
+[2.903556] (-) TimerEvent: {}
+[3.003740] (-) TimerEvent: {}
+[3.103963] (-) TimerEvent: {}
+[3.108617] (mower_description) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.204079] (-) TimerEvent: {}
+[3.304287] (-) TimerEvent: {}
+[3.305235] (mower_description) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.331218] (mower_description) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[3.333365] (mower_description) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[3.358321] (mower_description) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[3.358467] (mower_description) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.358509] (mower_description) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[3.358578] (mower_description) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[3.377217] (mower_description) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[3.404360] (-) TimerEvent: {}
+[3.504564] (-) TimerEvent: {}
+[3.557795] (mower_description) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.583409] (mower_description) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[3.583892] (mower_description) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.584339] (mower_description) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[3.585543] (mower_description) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.589918] (mower_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.604633] (-) TimerEvent: {}
+[3.629072] (mower_description) StdoutLine: {'line': b'-- Generating done\n'}
+[3.652689] (mower_description) StdoutLine: {'line': b'-- Build files have been written to: /home/q/mower_description_ws/build/mower_description\n'}
+[3.666504] (mower_description) CommandEnded: {'returncode': 0}
+[3.667181] (mower_description) JobProgress: {'identifier': 'mower_description', 'progress': 'build'}
+[3.667934] (mower_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/q/mower_description_ws/build/mower_description', '--', '-j24', '-l24'], 'cwd': '/home/q/mower_description_ws/build/mower_description', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'q'), ('LC_TIME', 'zh_CN.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/q'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.112.0'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2823'), ('BUNDLED_DEBUGPY_PATH', '/home/q/.vscode/extensions/ms-python.debugpy-2026.4.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=2f3333c806da51d227423a9769f06860'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7897/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'q'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'q'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/q/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/q/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/humble/bin:/home/q/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/q/.vscode/extensions/ms-python.debugpy-2026.4.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/HF-N-L-001687:@/tmp/.ICE-unix/2823,unix/HF-N-L-001687:/tmp/.ICE-unix/2823'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3b671339_c25a_4a8a_9b90_2effadffb533'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/q/.vscode/extensions/ms-python.debugpy-2026.4.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e6226bf4f7c3027c.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/q/.config/Code/User/workspaceStorage/6751f0c3d213965956ad6ee7fa254979/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e3f6a4e6d3.sock'), ('GNOME_TERMINAL_SERVICE', ':1.465'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '27'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/q/mower_description_ws/build/mower_description'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=2f3333c806da51d227423a9769f06860'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[3.704740] (-) TimerEvent: {}
+[3.714358] (mower_description) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[3.724610] (mower_description) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[3.726010] (mower_description) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[3.735396] (mower_description) StdoutLine: {'line': b'[  9%] Built target ament_cmake_python_copy_mower_description\n'}
+[3.804820] (-) TimerEvent: {}
+[3.905040] (-) TimerEvent: {}
+[3.935927] (mower_description) StdoutLine: {'line': b'[  9%] Built target mower_description__rs\n'}
+[3.946836] (mower_description) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/mower_description__rosidl_generator_c.dir/rosidl_generator_c/mower_description/srv/detail/cutting_motor_control__functions.c.o\x1b[0m\n'}
+[3.967466] (mower_description) StdoutLine: {'line': b'[ 12%] Built target mower_description__cpp\n'}
+[3.980779] (mower_description) StdoutLine: {'line': b'[ 15%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[3.980969] (mower_description) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.981045] (mower_description) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.003751] (mower_description) StdoutLine: {'line': b'running egg_info\n'}
+[4.004195] (mower_description) StdoutLine: {'line': b'creating mower_description.egg-info\n'}
+[4.004404] (mower_description) StdoutLine: {'line': b'writing mower_description.egg-info/PKG-INFO\n'}
+[4.004567] (mower_description) StdoutLine: {'line': b'writing dependency_links to mower_description.egg-info/dependency_links.txt\n'}
+[4.005111] (-) TimerEvent: {}
+[4.005287] (mower_description) StdoutLine: {'line': b'writing top-level names to mower_description.egg-info/top_level.txt\n'}
+[4.005595] (mower_description) StdoutLine: {'line': b"writing manifest file 'mower_description.egg-info/SOURCES.txt'\n"}
+[4.007615] (mower_description) StdoutLine: {'line': b"reading manifest file 'mower_description.egg-info/SOURCES.txt'\n"}
+[4.008268] (mower_description) StdoutLine: {'line': b"writing manifest file 'mower_description.egg-info/SOURCES.txt'\n"}
+[4.041034] (mower_description) StdoutLine: {'line': b'[ 21%] Built target ament_cmake_python_build_mower_description_egg\n'}
+[4.066265] (mower_description) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking C shared library libmower_description__rosidl_generator_c.so\x1b[0m\n'}
+[4.105231] (-) TimerEvent: {}
+[4.109417] (mower_description) StdoutLine: {'line': b'[ 25%] Built target mower_description__rosidl_generator_c\n'}
+[4.122104] (mower_description) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.123217] (mower_description) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.123988] (mower_description) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[4.205317] (-) TimerEvent: {}
+[4.223060] (mower_description) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/mower_description__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mower_description/srv/cutting_motor_control__type_support.cpp.o\x1b[0m\n'}
+[4.230654] (mower_description) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/mower_description__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mower_description/srv/detail/dds_fastrtps/cutting_motor_control__type_support.cpp.o\x1b[0m\n'}
+[4.285689] (mower_description) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/mower_description__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mower_description/srv/detail/cutting_motor_control__type_support.cpp.o\x1b[0m\n'}
+[4.305407] (-) TimerEvent: {}
+[4.334645] (mower_description) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/mower_description__rosidl_typesupport_c.dir/rosidl_typesupport_c/mower_description/srv/cutting_motor_control__type_support.cpp.o\x1b[0m\n'}
+[4.356290] (mower_description) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding C object CMakeFiles/mower_description__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mower_description/srv/detail/cutting_motor_control__type_support.c.o\x1b[0m\n'}
+[4.375685] (mower_description) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/mower_description__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mower_description/srv/detail/cutting_motor_control__type_support_c.cpp.o\x1b[0m\n'}
+[4.405488] (-) TimerEvent: {}
+[4.443462] (mower_description) StdoutLine: {'line': b'[ 56%] \x1b[32m\x1b[1mLinking C shared library libmower_description__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[4.480863] (mower_description) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX shared library libmower_description__rosidl_typesupport_c.so\x1b[0m\n'}
+[4.483109] (mower_description) StdoutLine: {'line': b'[ 59%] Built target mower_description__rosidl_typesupport_introspection_c\n'}
+[4.505599] (-) TimerEvent: {}
+[4.533033] (mower_description) StdoutLine: {'line': b'[ 59%] Built target mower_description__rosidl_typesupport_c\n'}
+[4.586230] (mower_description) StdoutLine: {'line': b'[ 62%] \x1b[32m\x1b[1mLinking CXX shared library libmower_description__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[4.605707] (-) TimerEvent: {}
+[4.635051] (mower_description) StdoutLine: {'line': b'[ 62%] Built target mower_description__rosidl_typesupport_cpp\n'}
+[4.701949] (mower_description) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libmower_description__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[4.705741] (-) TimerEvent: {}
+[4.713666] (mower_description) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library libmower_description__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[4.763099] (mower_description) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libmower_description__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[4.772954] (mower_description) StdoutLine: {'line': b'[ 71%] Built target mower_description__rosidl_typesupport_fastrtps_c\n'}
+[4.779307] (mower_description) StdoutLine: {'line': b'[ 71%] Built target mower_description__rosidl_typesupport_introspection_cpp\n'}
+[4.805840] (-) TimerEvent: {}
+[4.825740] (mower_description) StdoutLine: {'line': b'[ 71%] Built target mower_description__rosidl_typesupport_fastrtps_cpp\n'}
+[4.849763] (mower_description) StdoutLine: {'line': b'[ 71%] Built target mower_description\n'}
+[4.875693] (mower_description) StdoutLine: {'line': b'[ 75%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[4.905929] (-) TimerEvent: {}
+[5.006203] (-) TimerEvent: {}
+[5.106448] (-) TimerEvent: {}
+[5.156174] (mower_description) StdoutLine: {'line': b'[ 75%] Built target mower_description__py\n'}
+[5.179440] (mower_description) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding C object CMakeFiles/mower_description__rosidl_generator_py.dir/rosidl_generator_py/mower_description/srv/_cutting_motor_control_s.c.o\x1b[0m\n'}
+[5.206537] (-) TimerEvent: {}
+[5.306772] (-) TimerEvent: {}
+[5.316199] (mower_description) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/mower_description/libmower_description__rosidl_generator_py.so\x1b[0m\n'}
+[5.374874] (mower_description) StdoutLine: {'line': b'[ 81%] Built target mower_description__rosidl_generator_py\n'}
+[5.404557] (mower_description) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/mower_description__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/mower_description/_mower_description_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[5.404820] (mower_description) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/mower_description__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/mower_description/_mower_description_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[5.405074] (mower_description) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/mower_description__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/mower_description/_mower_description_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[5.406832] (-) TimerEvent: {}
+[5.507113] (-) TimerEvent: {}
+[5.595206] (mower_description) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/mower_description/mower_description_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.595440] (mower_description) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/mower_description/mower_description_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.596836] (mower_description) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/mower_description/mower_description_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.607223] (-) TimerEvent: {}
+[5.639726] (mower_description) StdoutLine: {'line': b'[100%] Built target mower_description__rosidl_typesupport_c__pyext\n'}
+[5.641054] (mower_description) StdoutLine: {'line': b'[100%] Built target mower_description__rosidl_typesupport_fastrtps_c__pyext\n'}
+[5.646590] (mower_description) StdoutLine: {'line': b'[100%] Built target mower_description__rosidl_typesupport_introspection_c__pyext\n'}
+[5.656645] (mower_description) CommandEnded: {'returncode': 0}
+[5.657488] (mower_description) JobProgress: {'identifier': 'mower_description', 'progress': 'install'}
+[5.666250] (mower_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/q/mower_description_ws/build/mower_description'], 'cwd': '/home/q/mower_description_ws/build/mower_description', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('LANGUAGE', 'zh_CN:en'), ('USER', 'q'), ('LC_TIME', 'zh_CN.UTF-8'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/q'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.112.0'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2823'), ('BUNDLED_DEBUGPY_PATH', '/home/q/.vscode/extensions/ms-python.debugpy-2026.4.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=2f3333c806da51d227423a9769f06860'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7897/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'q'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'q'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/q/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/q/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/humble/bin:/home/q/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/q/.vscode/extensions/ms-python.debugpy-2026.4.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/HF-N-L-001687:@/tmp/.ICE-unix/2823,unix/HF-N-L-001687:/tmp/.ICE-unix/2823'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3b671339_c25a_4a8a_9b90_2effadffb533'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/q/.vscode/extensions/ms-python.debugpy-2026.4.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-e6226bf4f7c3027c.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/q/.config/Code/User/workspaceStorage/6751f0c3d213965956ad6ee7fa254979/ms-python.python/pythonrc.py'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e3f6a4e6d3.sock'), ('GNOME_TERMINAL_SERVICE', ':1.465'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '27'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/q/mower_description_ws/build/mower_description'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('CLUTTER_IM_MODULE', 'xim'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=2f3333c806da51d227423a9769f06860'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[5.675605] (mower_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.675727] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/ament_index/resource_index/rosidl_interfaces/mower_description\n'}
+[5.676334] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description\n'}
+[5.676426] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/msg\n'}
+[5.676471] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/msg/rosidl_generator_c__visibility_control.h\n'}
+[5.676665] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv\n'}
+[5.676724] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/cutting_motor_control.h\n'}
+[5.676911] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail\n'}
+[5.676981] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/cutting_motor_control__functions.c\n'}
+[5.677104] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/cutting_motor_control__struct.h\n'}
+[5.677281] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/cutting_motor_control__type_support.h\n'}
+[5.677444] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/cutting_motor_control__functions.h\n'}
+[5.677780] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/environment/library_path.sh\n'}
+[5.677953] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/environment/library_path.dsv\n'}
+[5.678190] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_generator_c.so\n'}
+[5.679386] (mower_description) StdoutLine: {'line': b'-- Set runtime path of "/home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_generator_c.so" to ""\n'}
+[5.679556] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description\n'}
+[5.679643] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/msg\n'}
+[5.679734] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[5.679875] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv\n'}
+[5.679964] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail\n'}
+[5.680053] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/cutting_motor_control__rosidl_typesupport_fastrtps_c.h\n'}
+[5.680153] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_typesupport_fastrtps_c.so\n'}
+[5.681192] (mower_description) StdoutLine: {'line': b'-- Set runtime path of "/home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[5.681370] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description\n'}
+[5.681473] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/msg\n'}
+[5.681553] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[5.681838] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv\n'}
+[5.681971] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail\n'}
+[5.682032] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/cutting_motor_control__struct.hpp\n'}
+[5.682384] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/cutting_motor_control__builder.hpp\n'}
+[5.682811] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/cutting_motor_control__traits.hpp\n'}
+[5.683100] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/cutting_motor_control__type_support.hpp\n'}
+[5.683466] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/cutting_motor_control.hpp\n'}
+[5.683949] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description\n'}
+[5.684011] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/msg\n'}
+[5.684069] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[5.684409] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv\n'}
+[5.684584] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail\n'}
+[5.684666] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/dds_fastrtps\n'}
+[5.684753] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/cutting_motor_control__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.684966] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_typesupport_fastrtps_cpp.so\n'}
+[5.686062] (mower_description) StdoutLine: {'line': b'-- Set runtime path of "/home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[5.686190] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description\n'}
+[5.686257] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/msg\n'}
+[5.686302] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[5.686533] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv\n'}
+[5.686673] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail\n'}
+[5.686725] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/cutting_motor_control__type_support.c\n'}
+[5.686911] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/cutting_motor_control__rosidl_typesupport_introspection_c.h\n'}
+[5.687352] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_typesupport_introspection_c.so\n'}
+[5.688277] (mower_description) StdoutLine: {'line': b'-- Set runtime path of "/home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_typesupport_introspection_c.so" to ""\n'}
+[5.688428] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_typesupport_c.so\n'}
+[5.689495] (mower_description) StdoutLine: {'line': b'-- Set runtime path of "/home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_typesupport_c.so" to ""\n'}
+[5.689671] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description\n'}
+[5.689784] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv\n'}
+[5.689833] (mower_description) StdoutLine: {'line': b'-- Up-to-date: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail\n'}
+[5.689870] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/cutting_motor_control__type_support.cpp\n'}
+[5.690022] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/include/mower_description/mower_description/srv/detail/cutting_motor_control__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.690386] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_typesupport_introspection_cpp.so\n'}
+[5.691484] (mower_description) StdoutLine: {'line': b'-- Set runtime path of "/home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[5.691585] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_typesupport_cpp.so\n'}
+[5.692586] (mower_description) StdoutLine: {'line': b'-- Set runtime path of "/home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_typesupport_cpp.so" to ""\n'}
+[5.692708] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/environment/pythonpath.sh\n'}
+[5.692932] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/environment/pythonpath.dsv\n'}
+[5.693274] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description-0.0.0-py3.10.egg-info\n'}
+[5.693436] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[5.694054] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[5.694356] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[5.694677] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[5.694949] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description\n'}
+[5.695044] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/libmower_description__rosidl_generator_py.so\n'}
+[5.695367] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/mower_description_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.695804] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/mower_description_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.696317] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/__init__.py\n'}
+[5.696640] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/mower_description_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.697171] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/_mower_description_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[5.697352] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/_mower_description_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[5.697522] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/srv\n'}
+[5.697611] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/srv/_cutting_motor_control_s.c\n'}
+[5.697857] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/srv/__init__.py\n'}
+[5.698220] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/srv/_cutting_motor_control.py\n'}
+[5.698626] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/_mower_description_s.ep.rosidl_typesupport_c.c\n'}
+[5.707283] (-) TimerEvent: {}
+[5.750583] (mower_description) StdoutLine: {'line': b"Listing '/home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description'...\n"}
+[5.750770] (mower_description) StdoutLine: {'line': b"Compiling '/home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/__init__.py'...\n"}
+[5.750867] (mower_description) StdoutLine: {'line': b"Listing '/home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/srv'...\n"}
+[5.750951] (mower_description) StdoutLine: {'line': b"Compiling '/home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/srv/__init__.py'...\n"}
+[5.751067] (mower_description) StdoutLine: {'line': b"Compiling '/home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/srv/_cutting_motor_control.py'...\n"}
+[5.754614] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/mower_description_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.755746] (mower_description) StdoutLine: {'line': b'-- Set runtime path of "/home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/mower_description_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.756248] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/mower_description_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.757014] (mower_description) StdoutLine: {'line': b'-- Set runtime path of "/home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/mower_description_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.757360] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/mower_description_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.758274] (mower_description) StdoutLine: {'line': b'-- Set runtime path of "/home/q/mower_description_ws/install/mower_description/local/lib/python3.10/dist-packages/mower_description/mower_description_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.758352] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_generator_py.so\n'}
+[5.759201] (mower_description) StdoutLine: {'line': b'-- Set runtime path of "/home/q/mower_description_ws/install/mower_description/lib/libmower_description__rosidl_generator_py.so" to ""\n'}
+[5.759276] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/ament_index/resource_index/rust_packages/mower_description\n'}
+[5.759521] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/rust\n'}
+[5.759597] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/rust/Cargo.toml\n'}
+[5.759800] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/rust/src\n'}
+[5.759850] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/rust/src/srv.rs\n'}
+[5.760155] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/rust/src/lib.rs\n'}
+[5.760392] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/rust/src/srv\n'}
+[5.760441] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/rust/src/srv/rmw.rs\n'}
+[5.760745] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/rust/build.rs\n'}
+[5.761161] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/srv/CuttingMotorControl.idl\n'}
+[5.761543] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/srv/CuttingMotorControl.srv\n'}
+[5.761907] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/srv/CuttingMotorControl_Request.msg\n'}
+[5.762268] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/srv/CuttingMotorControl_Response.msg\n'}
+[5.762734] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/lib/mower_description/cutting_motor_controller.py\n'}
+[5.763027] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/lib/mower_description/gear_marker_publisher.py\n'}
+[5.763430] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/launch\n'}
+[5.763524] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/launch/mower_gazebo.launch.py\n'}
+[5.763860] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/urdf\n'}
+[5.763935] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/urdf/mower.urdf\n'}
+[5.764345] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/worlds\n'}
+[5.764430] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/worlds/room_world.world\n'}
+[5.764724] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/worlds/room_world_open.world\n'}
+[5.765094] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/worlds/mower_world.world\n'}
+[5.765384] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/config\n'}
+[5.765460] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/config/rviz\n'}
+[5.765552] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/config/rviz/mower_gazebo.rviz\n'}
+[5.765961] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/ament_index/resource_index/package_run_dependencies/mower_description\n'}
+[5.766357] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/ament_index/resource_index/parent_prefix_path/mower_description\n'}
+[5.766674] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/environment/ament_prefix_path.sh\n'}
+[5.766943] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/environment/ament_prefix_path.dsv\n'}
+[5.767295] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/environment/path.sh\n'}
+[5.767535] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/environment/path.dsv\n'}
+[5.767928] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/local_setup.bash\n'}
+[5.768271] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/local_setup.sh\n'}
+[5.768524] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/local_setup.zsh\n'}
+[5.768808] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/local_setup.dsv\n'}
+[5.769077] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/package.dsv\n'}
+[5.769443] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/ament_index/resource_index/packages/mower_description\n'}
+[5.769720] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/export_mower_description__rosidl_generator_cExport.cmake\n'}
+[5.770047] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/export_mower_description__rosidl_generator_cExport-noconfig.cmake\n'}
+[5.770411] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/export_mower_description__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[5.770955] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/export_mower_description__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[5.771476] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/export_mower_description__rosidl_generator_cppExport.cmake\n'}
+[5.771949] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/export_mower_description__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[5.772434] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/export_mower_description__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[5.772981] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/mower_description__rosidl_typesupport_introspection_cExport.cmake\n'}
+[5.773467] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/mower_description__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[5.773940] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/mower_description__rosidl_typesupport_cExport.cmake\n'}
+[5.774229] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/mower_description__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[5.774791] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/mower_description__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[5.775288] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/mower_description__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[5.775782] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/mower_description__rosidl_typesupport_cppExport.cmake\n'}
+[5.776307] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/mower_description__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[5.776844] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/export_mower_description__rosidl_generator_pyExport.cmake\n'}
+[5.777312] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/export_mower_description__rosidl_generator_pyExport-noconfig.cmake\n'}
+[5.777840] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/rosidl_cmake-extras.cmake\n'}
+[5.778167] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[5.778524] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[5.778861] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[5.779171] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[5.779498] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[5.779830] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[5.780189] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/mower_descriptionConfig.cmake\n'}
+[5.780502] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/cmake/mower_descriptionConfig-version.cmake\n'}
+[5.780850] (mower_description) StdoutLine: {'line': b'-- Installing: /home/q/mower_description_ws/install/mower_description/share/mower_description/package.xml\n'}
+[5.783087] (mower_description) CommandEnded: {'returncode': 0}
+[5.805001] (mower_description) JobEnded: {'identifier': 'mower_description', 'rc': 0}
+[5.805680] (-) EventReactorShutdown: {}
